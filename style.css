@@ -3,3 +3,12 @@ body {
   height: 95vh;
   background: url("back.png") center/cover no-repeat;
 }
+
+form,
+.greeting {
+  display: none;
+}
+
+.show {
+  display: block;
+}
