@@ -1,0 +1,5 @@
+body {
+  width: 95vw;
+  height: 95vh;
+  background: url("back.png") center/cover no-repeat;
+}
