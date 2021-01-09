@@ -4,8 +4,8 @@ body {
   background: url("back.png") center/cover no-repeat;
 }
 
-form,
-.greeting {
+.form-greeting,
+.greeting-text {
   display: none;
 }
 

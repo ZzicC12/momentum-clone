@@ -1,6 +1,6 @@
-const form = document.querySelector("form");
-const input = form.querySelector("input");
-const greeting = document.querySelector(".greeting");
+const form = document.querySelector(".form-greeting");
+const input = form.querySelector(".greeting-input");
+const greeting = document.querySelector(".greeting-text");
 
 function loadName() {
   const USER_LS = localStorage.getItem("name");
