@@ -1,17 +1,20 @@
 const weather_text = document.querySelector(".weather");
 
-function askWeather() {
+function askCoord() {
   navigator.geolocation.getCurrentPosition(requestSuccess, requestFail);
 }
 
 function requestSuccess(position) {
   const lat = position.coords.latitude;
   const long = position.coords.longitude;
+
+  const coord = { lat, long };
+  localStorage.setItem("coord", JSON.stringify(coord));
   requestWeather(lat, long);
 }
 
 function requestFail() {
-  alert("fail");
+  console.log("can't access");
 }
 
 function requestWeather(x, y) {
@@ -19,20 +22,19 @@ function requestWeather(x, y) {
     `https://api.openweathermap.org/data/2.5/weather?lat=${x}&lon=${y}&appid=6fb45b4b2427fec27c6f1bf78575cecf&units=metric`
   )
     .then((response) => response.json())
-    .then((result) => localStorage.setItem("weather", JSON.stringify(result)))
-    .catch((error) => console.log("error", error))
-    .showWeather();
-}
-
-function showWeather() {
-  const WEATHER = localStorage.getItem("weather");
-  const parsed = JSON.parse(WEATHER);
-  weather_text.textContent = parsed.main.temp;
+    .then((result) => {
+      weather_text.innerHTML = `location : ${result.name} <br><br> temperature : ${result.main.temp}°C `;
+    });
 }
 
 function loadWeather() {
-  if (localStorage.getItem("weather") == null) askWeather();
-  else showWeather();
+  const COORD = localStorage.getItem("coord");
+  if (COORD === null) askCoord();
+  else {
+    const lat = JSON.parse(COORD).lat;
+    const long = JSON.parse(COORD).long;
+    requestWeather(lat, long);
+  }
 }
 
 function init() {

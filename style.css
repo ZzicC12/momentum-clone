@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,400&display=swap");
+
 body {
+  font-family: "Roboto", sans-serif;
   width: 95vw;
   height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+input {
+  outline: none;
+  border: none;
 }
 
 .greeting__form,
@@ -8,43 +19,116 @@ body {
   display: none;
 }
 
-.show {
-  display: block;
-}
-
 .time {
   display: block;
-  font-size: 60px;
-  font-weight: 600;
-  color: #34495e;
+  width: 100%;
+  font-size: 80px;
+  font-weight: 800;
+
   text-align: center;
 }
 .greeting__form {
   width: 100%;
   text-align: center;
+  margin: 50px 0;
 }
 
-.greeting__input {
-  border: none;
-  outline: none;
-  padding: 20px;
+.greeting__input,
+.toDo__input {
+  padding: 10px;
   font-size: 60px;
   font-weight: 600;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  color: white;
-  text-align: center;
-}
-.greeting__input::placeholder {
-  color: white;
-  margin-left: 20px;
 
+  text-align: center;
+  width: 80%;
+  margin: 30px auto;
+}
+.greeting__input::placeholder,
+.toDo__input::placeholder {
+  margin-left: 20px;
   text-align: center;
 }
 
 .greeting__text {
-  font-size: 50px;
-  font-weight: 600;
-  color: white;
+  width: 100%;
+  font-size: 90px;
+  font-weight: 500;
+
   text-align: center;
+  margin: 50px 0;
+}
+section {
+  width: 33%;
+}
+
+.toDo__form {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+.toDo__list {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 500px;
+  padding: 0;
+  margin: auto;
+  overflow-y: auto;
+}
+
+.toDo_title {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.weather-box {
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.weather-title {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.weather-box {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+li button {
+  border: none;
+  transition: all 300ms ease-in-out;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+li button:hover {
+  background-color: white;
+  transform: rotate(360deg);
+}
+.show {
+  display: block;
 }

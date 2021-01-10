@@ -12,21 +12,31 @@
     <title>Momentum</title>
   </head>
   <body>
-    <span class="time">0:0</span>
+    <section class="weather-section">
+      <div class="weather-box">
+        <span class="weather-title">Today's Weather</span>
+        <span class="weather">weather</span>
+      </div>
+    </section>
+    <section class="greeting-section">
+      <span class="time">0:0</span>
 
-    <form class="greeting__form">
-      <input
-        class="greeting__input"
-        type="text"
-        placeholder="write your name"
-      />
-    </form>
-    <span class="greeting__text">welcome</span>
-
-    <form class="toDo__form">
-      <input class="toDo__input" type="text" placeholder="to do" />
-    </form>
-    <ul class="toDo__list"></ul>
-    <span class="weather">1</span>
+      <form class="greeting__form">
+        <input
+          class="greeting__input"
+          type="text"
+          placeholder="write your name"
+        />
+      </form>
+      <span class="greeting__text">welcome</span>
+      <form class="toDo__form">
+        <input class="toDo__input" type="text" placeholder="Write To Do" />
+      </form>
+    </section>
+    <section class="todo-section">
+      <ul class="toDo__list">
+        <span class="toDo_title">To Do List</span>
+      </ul>
+    </section>
   </body>
 </html>
