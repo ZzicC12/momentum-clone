@@ -27,7 +27,6 @@ function requestWeather(x, y) {
 function showWeather() {
   const WEATHER = localStorage.getItem("weather");
   const parsed = JSON.parse(WEATHER);
-  console.log(parsed);
   weather_text.textContent = parsed.main.temp;
 }
 

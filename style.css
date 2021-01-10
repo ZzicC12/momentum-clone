@@ -3,11 +3,48 @@ body {
   height: 95vh;
 }
 
-.form-greeting,
-.greeting-text {
+.greeting__form,
+.greeting__text {
   display: none;
 }
 
 .show {
   display: block;
+}
+
+.time {
+  display: block;
+  font-size: 60px;
+  font-weight: 600;
+  color: #34495e;
+  text-align: center;
+}
+.greeting__form {
+  width: 100%;
+  text-align: center;
+}
+
+.greeting__input {
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 60px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+}
+.greeting__input::placeholder {
+  color: white;
+  margin-left: 20px;
+
+  text-align: center;
+}
+
+.greeting__text {
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
 }
