@@ -33,7 +33,7 @@ function makeList(list) {
   list_item.appendChild(span);
   list_item.appendChild(btn);
   toDo_list.appendChild(list_item);
-
+  list_item.scrollIntoView({ behavior: "smooth" });
   toDo_input.value = "";
 
   const newID = idN;
