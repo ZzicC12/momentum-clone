@@ -49,6 +49,7 @@ input {
 .toDo__input::placeholder {
   margin-left: 20px;
   text-align: center;
+  font-size: 40px;
 }
 
 .greeting__text {

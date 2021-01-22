@@ -17,7 +17,7 @@ function getList() {
 function handleSubmit(event) {
   event.preventDefault();
   const text = toDo_input.value;
-  makeList(text);
+  toDo_input.value && makeList(text);
 }
 
 function makeList(list) {

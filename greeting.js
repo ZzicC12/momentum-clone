@@ -4,24 +4,23 @@ const greeting = document.querySelector(".greeting__text");
 const todo = document.querySelector(".toDo__form");
 const todo_list = document.querySelector(".toDo__list");
 
-function loadName() {
+const loadName = () => {
   const USER_LS = localStorage.getItem("name");
   if (USER_LS == null) writeName();
   else showGreeting();
-}
+};
 
-function writeName() {
+const writeName = () => {
   form.classList.toggle("show");
   form.addEventListener("submit", handleSubmit);
-}
-
-function showGreeting() {
+};
+const showGreeting = () => {
   greeting.classList.toggle("show");
   todo.classList.toggle("show");
   todo_list.classList.toggle("show");
   const USERNAME = localStorage.getItem("name");
   greeting.innerHTML = `Welcome <br>${USERNAME}`;
-}
+};
 
 function handleSubmit(event) {
   event.preventDefault();
